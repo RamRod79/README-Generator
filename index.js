@@ -2,7 +2,7 @@
 const path = require('path');
 const inquirer = require('inquirer');
 const fs = require('fs');
-// const generateMarkdown = require('./generateHTML');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // Array of questions for user input
 const questions = [
@@ -26,14 +26,15 @@ const questions = [
 
     {
         type: 'input',
-        name: 'proj-desc',
+        name: 'description',
         message: 'Please write a short description of your project',
     },
 
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
         message: 'What kind of license should your project have?',
+        choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'WTFPL', 'None']
     },
 
     {
@@ -56,7 +57,7 @@ const questions = [
 
     {
         type: 'input',
-        name: 'fundMe',
+        name: 'Contribute',
         message: 'What does the user need to know about contributing to the repo?',
     },
 ];
