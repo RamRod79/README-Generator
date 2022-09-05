@@ -51,6 +51,12 @@ const questions = [
 
     {
         type: 'input',
+        name: 'credits',
+        message: 'Were there any collaborators ro third-party assets used that require attribution?',
+    },
+
+    {
+        type: 'input',
         name: 'repo',
         message: 'What does the user need to know about using the repo?',
     },

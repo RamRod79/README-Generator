@@ -8,7 +8,7 @@ A short description explaining the what, why, and how of project "${data.proj-na
 
 ## Table of Contents (Optional)
 
-If your README is long, add a table of contents to make it easy for users to find what they need.
+A table of contents to make it easy for users to find what they need.
 
 - [Installation](#installation)
 - [Usage](#usage)
@@ -17,13 +17,13 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+Pull the GitHub repository from the username: ${data.username}. To ensure the program can runs properly the following commmand shoul be ran to install dependencies:
+
+${data.dependencies}
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+Screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
 
     ```md
     ![alt text](assets/images/screenshot.png)
@@ -64,6 +64,8 @@ The following example(s) are test that can be ran for this application:
 ${data.tests}
 
 ## Contact Info
+
+For any other issues or comments please contact me at:
 
 GitHub username: ${data.username}
 Email: ${data.email}
