@@ -2,11 +2,19 @@
 // If there is no license, return an empty string
 
 function renderLicenseBadge(license) {
-  return `[![License]
-(https://img.shields.io/badge/License-${license.link}-${license.color}.svg)](${license.url})]`
+  if (!license) {
+    return ``;
+  } else {
+    return `[![${license} license](https://img.shields.io/badge/License-${license}-blue.svg)](${renderLicenseLink(license)})`
+  }
+}
+  
+  
+//   return `[![License]
+// (https://img.shields.io/badge/License-${license.link}-${license.color}.svg)](${license.url})]`
 
 
-};
+
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -14,19 +22,22 @@ function renderLicenseLink(license) {
 
   switch (license) {
     case 'MIT':
-      console.log();
+      [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT);
       break;
     case 'APACHE 2.0':
-      console.log();
+      [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0);
       break;
     case 'BSD 3':
-      console.log();
+      [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause);
       break;
     case 'WTFPL':
-      console.log();
+      <a href="http://www.wtfpl.net/"><img
+       src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
+       width="80" height="15" alt="WTFPL" /></a>
+       https://img.shields.io/badge/WTFPL-YUP-red;
       break;
     case 'None':
-      console.log();
+      '';
       break;
     default:
       console.log("");
@@ -39,7 +50,7 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) { }
 
-// TODO: Create a function to generate markdown for README
+// Function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
   

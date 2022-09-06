@@ -27,7 +27,7 @@ const questions = ([
     {
         type: 'input',
         name: 'description',
-        message: 'Please write a short description of your project',
+        message: 'Please write a short description of your project:',
     },
 
     {
@@ -68,9 +68,9 @@ const questions = ([
     },
 ])
 
-.then((answers) => {
-console.log(answers);
-})
+// .then((answers) => {
+// console.log(answers);
+// })
 
 
 // .catch((error) => {
