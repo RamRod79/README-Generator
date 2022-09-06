@@ -5,7 +5,7 @@ const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
 // Array of questions for user input
-const questions = [
+const questions = ([
     {
         type: 'input',
         name: 'username',
@@ -20,7 +20,7 @@ const questions = [
 
     {
         type: 'input',
-        name: 'proj-name',
+        name: 'title',
         message: "What is your project's name?",
     },
 
@@ -31,7 +31,7 @@ const questions = [
     },
 
     {
-        type: 'list',
+        type: 'checkbox',
         name: 'license',
         message: 'What kind of license should your project have?',
         choices: ['MIT', 'APACHE 2.0', 'GPL 3.0', 'BSD 3', 'WTFPL', 'None']
@@ -52,7 +52,7 @@ const questions = [
     {
         type: 'input',
         name: 'credits',
-        message: 'Were there any collaborators ro third-party assets used that require attribution?',
+        message: 'Were there any collaborators to third-party assets used that require attribution?',
     },
 
     {
@@ -66,17 +66,30 @@ const questions = [
         name: 'Contribute',
         message: 'What does the user need to know about contributing to the repo?',
     },
-];
+])
 
-// Function to write README file
-function writeToFile(fileName, data) {
-    return fs.writeFileSync(path.join(process.cwd(), "/dist", fileName), data);
+.then((answers) => {
+console.log(answers);
+})
+
+
+// .catch((error) => {
+//     if (error.isTtyError) {
+//         //Prompt couldn't be rended in current environment
+//     } else {
+//         // something else went wrong
+//     }
+// });
+
+// // Function to write README file
+function writeToFile(README, data) {
+    return fs.writeFileSync(path.join(process.cwd(), "/utils", README), data);
 }
 
-// Function to initialize app
+// // Function to initialize app
 function init() {
     inquirer.prompt(questions).then((answers) => {
-        fs.writeToFile('index2.html', generateMarkdown(answers));
+        fs.writeToFile('README.md', generateMarkdown(answers));
         console.log('Saved: Your file is in the dist folder')
 
     });
