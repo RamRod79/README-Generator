@@ -1,13 +1,25 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Function that returns a license badge based on which license is passed in
+// If there is no license, returns an empty string
 
 function renderLicenseBadge(license) {
-  if (!license) {
-    return ``;
+  let licenseType = license.license; 
+  let userLicense = ''
+  if(licenseType === 'MIT') {
+    userLicense = `![License: MIT](https://img.shields.io/badge/License-MIT-success)`
+  } else if (licenseType === 'APACHE 2.0') {
+    userLicense = `![APACHE 2.0 license](https://img.shields.io/badge/License-APACHE%202.0-important)`
+  } else if (licenseType === 'GPL 3.0') {
+    userLicense = `![GPL 3.0 license](https://img.shields.io/badge/License-GPL%203.0-blue)`
+  } else if (licenseType === 'BSD 3') {
+    userLicense = `![BSD 3 license](https://img.shields.io/badge/License-BSD-red)`
+  } else if (licenseType === 'WTFPL') {
+    userLicense = `![WTFPL license](https://img.shields.io/badge/License-WTFPL-critical)`
   } else {
-    return `[![${license} license](https://img.shields.io/badge/License-${license}-blue.svg)](${renderLicenseLink(license)})`
+    license.license = "None"
   }
-}
+  return userLicense;
+};
+
   
   
 //   return `[![License]
@@ -15,35 +27,31 @@ function renderLicenseBadge(license) {
 
 
 
+// // Returns the license link
+// // If there is no license, return an empty string
+// function renderLicenseLink(license) {
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {
-
-  switch (license) {
-    case 'MIT':
-      [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT);
-      break;
-    case 'APACHE 2.0':
-      [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0);
-      break;
-    case 'BSD 3':
-      [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause);
-      break;
-    case 'WTFPL':
-      <a href="http://www.wtfpl.net/"><img
-       src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
-       width="80" height="15" alt="WTFPL" /></a>
-       https://img.shields.io/badge/WTFPL-YUP-red;
-      break;
-    case 'None':
-      '';
-      break;
-    default:
-      console.log("");
-      break;
-  }
-}
+//   switch (license().getlicense()) {
+//     case 'MIT':
+//       userLicense = [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT);
+//       break;
+//     case 'APACHE 2.0':
+//       userLicense = [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0);
+//       break;
+//     case 'GPL 3.0':
+//       userLicense = [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/GPL-3.0);
+//       break;
+//     case 'BSD 3':
+//       userLicense = [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause);
+//       break;
+//     case 'WTFPL':
+//       userLicense = [![License](https://img.shields.io/badge/License-WTFPL-critical)](http://www.wtfpl.net/about/);
+//       break;
+//     case 'None':
+//       userLicense = '';
+//       break;
+//   }
+// }
 
 
 // TODO: Create a function that returns the license section of README
@@ -99,7 +107,7 @@ ${data.license}
 
 ## Badges
 
-${renderLicense.Badge(date.license)}
+${renderLicenseBadge(data.license)}
 
 ## Repo Features
 
