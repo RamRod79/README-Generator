@@ -64,21 +64,10 @@ const questions = [
 
   {
     type: "input",
-    name: "Contribute",
+    name: "contribute",
     message: "What does the user need to know about contributing to the repo?",
   },
 ];
-// .then((answers) => {
-//     console.log(answers);
-// })
-
-//     .catch((error) => {
-//         if (error.isTtyError) {
-//             //Prompt couldn't be rended in current environment
-//         } else {
-//             // something else went wrong
-//         }
-//     });
 
 // // // Function to write README file
 function writeToFile(README, data) {
@@ -89,7 +78,7 @@ function writeToFile(README, data) {
 function init() {
   inquirer.prompt(questions).then((answers) => {
     writeToFile("README.md", generateMarkdown(answers));
-    console.log("Saved: Your file is in the dist folder");
+    console.log("Saved: Your file has been created");
   });
 }
 

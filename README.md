@@ -4,7 +4,7 @@
 
 A short description explaining the what, why, and how of project "README-Generator":
 
-This application will help a user produce a high-quality README for their app. It will include various informaiton to include what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions—this last part increases the likelihood that other developers will contribute to the success of the project.
+This application will help a user produce a high-quality README for their app. It will include various information to include what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions—this last part increases the likelihood that other developers will contribute to the success of the project.
 
 It quickly and easily generates a README file by using a command-line application to generate one. This allows the project creator to devote more time working on the project.
 
@@ -31,7 +31,7 @@ Pulling the GitHub repository from the follwing URL: https://github.com/RamRod79
 
 List of collaborators:
 
-- UCLA Extension, Coding Bootcamp Instrucor and TAs
+- UCLA Extension, Coding Bootcamp Instructor and TAs
 
 ## License
 
@@ -47,7 +47,7 @@ Badges aren't necessary, per se, but they demonstrate street cred. Badges let ot
 
 ## Repo Features
 
-Using this repo can be intitiated by running 'npm run Start' in the command terminal after opening the integrated terminal to initiate the program. Using this repo requires inquirer 8.2.4 or higher, and updated node modules to ensure application runs properly.
+Using this repo can be initiated by running 'npm run Start' in the command terminal after opening the integrated terminal to initiate the program. Using this repo requires inquirer 8.2.4 or higher, and updated node modules to ensure application runs properly.
 
 ## How to Contribute
 

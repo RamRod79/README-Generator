@@ -21,23 +21,23 @@ function renderLicenseBadge(license) {
 
   
   
-// // Returns the license link
+// // Returns the license link - tried case swith this time
 // // If there is no license, return an empty string
 function renderLicenseLink(license) {
   let userLicense;
 
   switch (license) {
     case 'MIT':
-      userLicense = `[License: MIT](https://img.shields.io/badge/License-MIT-success)](https://opensource.org/licenses/MIT)`;
+      userLicense = `[![License](https://img.shields.io/badge/License-MIT-success)](https://opensource.org/licenses/MIT)`;
       break;
     case 'APACHE 2.0':
-      userLicense = `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+      userLicense = `[![License](https://img.shields.io/badge/License-APACHE%202.0-important)](https://opensource.org/licenses/Apache-2.0)`;
       break;
     case 'GPL 3.0':
-      userLicense = `[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/GPL-3.0)`;
+      userLicense = `[![License](https://img.shields.io/badge/License-GPL%203.0-blue)](https://opensource.org/licenses/GPL-3.0)`;
       break;
     case 'BSD 3':
-      userLicense = `[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`;
+      userLicense = `[![License](https://img.shields.io/badge/License-BSD-red)](https://opensource.org/licenses/BSD-3-Clause)`;
       break;
     case 'WTFPL':
       userLicense = `[![License](https://img.shields.io/badge/License-WTFPL-critical)](http://www.wtfpl.net/about/)`;
@@ -86,11 +86,9 @@ Screenshot, create an "assets/images" folder in your repository and upload your 
 
 ## Credits
 
-List your collaborators, if any, with links to their GitHub profiles.
+List of collaborators:
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+${data.credits}
 
 ## License
 
@@ -104,11 +102,11 @@ ${renderLicenseBadge(data.license)}
 
 ## Repo Features
 
-Using this repo can be intitiated by running 'npm run Start' to initiate the program. ${data.repo}
+Using this repo can be initiated by running 'npm run Start' in the command terminal after opening the integrated terminal to initiate the program. ${data.repo}
 
 ## How to Contribute
 
-If other developers would like to contribute, you can contact me at ${data.email} and/or ${data.contribute}
+If other developers would like to contribute, you can contact me at ${data.email}. ${data.contribute}
 
 ## Tests
 
